@@ -1,0 +1,9 @@
+.user-image {
+    width: 40px;
+}
+
+.nav-elements {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
