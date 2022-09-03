@@ -7,3 +7,22 @@
     justify-content: end;
     align-items: center;
 }
+
+.categories {
+    list-style-type: none;
+}
+
+.categories a {
+    text-decoration: none;
+    color: gray;
+}
+
+.categories a:active {
+    color: blue;
+}
+
+.author-image {
+    width: 50px;
+    border-radius: 50%;
+
+}
