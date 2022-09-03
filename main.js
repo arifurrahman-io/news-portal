@@ -20,6 +20,8 @@ const displayCategories = categories => {
     });
 }
 
+
+
 const loadNews = async (categoryId) => {
 
     toggleSpinner(true);
@@ -34,8 +36,8 @@ const loadNews = async (categoryId) => {
     const counter = data.data.length
     loadCounter(counter);
 
+    console.log(category);
 }
-
 
 const newsCategory = news => {
     const newsContainer = document.getElementById("text");
@@ -46,9 +48,6 @@ const newsCategory = news => {
         const categoryNews = document.createElement('div');
         categoryNews.classList.add('div');
 
-
-
-
         categoryNews.innerHTML = `
         <div class="row d-md-flex align-items-center border rounded bg-white">
             <div class="col-12 col-md-3 p-3 m-auto">
@@ -57,7 +56,7 @@ const newsCategory = news => {
             <div class="col-12 col-md-9 p-4">
                 <div class="">
                     <h5 class="card-title">${myNews.title}</h5>
-                    <p class="card-text">${myNews.details.slice(0, 300) + "..."}</p>
+                    <p class="card-text">${myNews.details.slice(0, 500) + "..."}</p>
                 </div>
                 <div class="row">
                     <div class="author-sec mt-4 col-6 col-md-3">
@@ -126,9 +125,15 @@ const newsCategory = news => {
     toggleSpinner(false)
 }
 
-const loadCounter = (counter, categoryId) => {
+const loadCounter = (counter) => {
     const newsCounter = document.getElementById('counter')
-    newsCounter.innerText = `${counter} Items Found for this Category`;
+    if (counter !== 0) {
+        newsCounter.innerText = `${counter} Items Found!`;
+    }
+    else {
+        newsCounter.innerText = `No Items Found!`;
+    }
+
 }
 
 const toggleSpinner = isLoading => {
@@ -144,5 +149,6 @@ const toggleSpinner = isLoading => {
 
 
 loadCategories();
+
 
 
