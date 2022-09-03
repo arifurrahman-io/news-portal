@@ -6,7 +6,6 @@ const loadCategories = async () => {
     const categories = data.data.news_category;
     displayCategories(categories);
 
-
 }
 
 const displayCategories = categories => {
@@ -24,6 +23,8 @@ const displayCategories = categories => {
 
 
 
+
+
 const loadNews = async (categoryId) => {
 
     toggleSpinner(true);
@@ -37,8 +38,6 @@ const loadNews = async (categoryId) => {
 
     const counter = data.data.length
     loadCounter(counter);
-
-    console.log(category);
 }
 
 const newsCategory = news => {
@@ -149,7 +148,4 @@ const toggleSpinner = isLoading => {
 }
 
 loadCategories();
-
-
-
 
