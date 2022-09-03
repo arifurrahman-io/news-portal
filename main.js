@@ -5,6 +5,8 @@ const loadCategories = async () => {
     const data = await res.json();
     const categories = data.data.news_category;
     displayCategories(categories);
+
+
 }
 
 const displayCategories = categories => {
@@ -50,8 +52,8 @@ const newsCategory = news => {
 
         categoryNews.innerHTML = `
         <div class="row d-md-flex align-items-center border rounded bg-white">
-            <div class="col-12 col-md-3 p-3 m-auto">
-                <img src="${myNews.thumbnail_url}" class="rounded img-fluid" alt="...">
+            <div class="col-12 col-md-3 p-3">
+                <img src="${myNews.thumbnail_url}" class="rounded w-100" alt="...">
             </div>
             <div class="col-12 col-md-9 p-4">
                 <div class="">
@@ -146,9 +148,8 @@ const toggleSpinner = isLoading => {
     }
 }
 
-
-
 loadCategories();
+
 
 
 
