@@ -17,7 +17,7 @@ const displayCategories = categories => {
         const categoryLi = document.createElement('li');
         categoryLi.classList.add('li');
         categoryLi.innerHTML = `
-        <a href='javascript:;' onclick = "loadNews(${category.category_id})"><li>${category.category_name}</li></a>
+        <a class = "col-sm-3 col-md-1" href='javascript:;' onclick = "loadNews(${category.category_id})"><li >${category.category_name}</li></a>
         `;
         categoryContainer.appendChild(categoryLi);
     });
