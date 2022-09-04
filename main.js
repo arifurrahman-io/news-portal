@@ -1,4 +1,5 @@
 
+//categories loading from api
 const loadCategories = async () => {
     const url = `https://openapi.programming-hero.com/api/news/categories`;
     const res = await fetch(url);
@@ -8,6 +9,7 @@ const loadCategories = async () => {
 
 }
 
+//show categories from api
 const displayCategories = categories => {
     const categoryContainer = document.getElementById("categories");
 
@@ -21,10 +23,7 @@ const displayCategories = categories => {
     });
 }
 
-
-
-
-
+//load news from api
 const loadNews = async (categoryId) => {
 
     toggleSpinner(true);
@@ -40,6 +39,7 @@ const loadNews = async (categoryId) => {
     loadCounter(counter);
 }
 
+//show news by category from api
 const newsCategory = news => {
     const newsContainer = document.getElementById("text");
 
@@ -126,6 +126,8 @@ const newsCategory = news => {
     toggleSpinner(false)
 }
 
+
+//show number of news for any spesific categiry 
 const loadCounter = (counter) => {
     const newsCounter = document.getElementById('counter')
     if (counter !== 0) {
@@ -137,6 +139,8 @@ const loadCounter = (counter) => {
 
 }
 
+
+//show spinner when data loading
 const toggleSpinner = isLoading => {
     const loaderSection = document.getElementById('loader');
     if (isLoading) {
