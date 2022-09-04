@@ -51,17 +51,17 @@ const newsCategory = news => {
 
         categoryNews.innerHTML = `
         <div class="row d-md-flex align-items-center border rounded bg-white">
-            <div class="col-12 col-md-3 p-3">
-                <img src="${myNews.thumbnail_url}" class="rounded w-100" alt="...">
+            <div class="col-12 col-md-3 p-3 d-flex justify-content-center">
+                <img src="${myNews.thumbnail_url}" class="rounded w-50" alt="...">
             </div>
             <div class="col-12 col-md-9 p-4">
                 <div class="">
                     <h5 class="card-title">${myNews.title}</h5>
-                    <p class="card-text">${myNews.details.slice(0, 500) + "..."}</p>
+                    <p class="card-text">${myNews.details.slice(0, 300) + "..."}</p>
                 </div>
                 <div class="row">
                     <div class="author-sec mt-4 col-6 col-md-3">
-                        <div class="d-flex align-items-center">
+                        <div class="d-flex align-items-center justify-content-center">
                             <div>
                                 <img class="pe-2 author-image" src="${myNews.author.img}" alt="">
                             </div>
@@ -71,19 +71,19 @@ const newsCategory = news => {
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3 d-flex align-items-center ">
+                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center">
                         <i class="fa-regular fa-eye px-2"></i>
                         <p class="m-0 px-2">${myNews.total_view}</p>
                     </div>
 
-                    <div class="col-6 col-md-3 d-flex align-items-center ">
+                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-star text-primary"></i>
                         <i class="fa-solid fa-star text-primary"></i>
                         <i class="fa-solid fa-star text-primary"></i>
                         <i class="fa-solid fa-star text-primary"></i>
                         <i class="fa-regular fa-star-half-stroke text-primary"></i>
                     </div>
-                    <div class="col-6 col-md-3 d-flex align-items-center ">
+                    <div class="col-6 col-md-3 d-flex align-items-center justify-content-center">
                     <!-- Button trigger modal -->
                     <button id= "btn-modal" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                       Read More
